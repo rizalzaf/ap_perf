@@ -81,7 +81,7 @@ Note that the equation for F-beta in general is:
 
 `ap_perf` can be installed using `pip`:
 ```
-pip install git+https://github.com/rizalzaf/ap_perf
+pip install ap_perf
 ```
 Some pre-requisite packages will be installed automatically: `numpy`, `scipy`, and `numba`. 
 It also requires `PyTorch` version `1.x`.

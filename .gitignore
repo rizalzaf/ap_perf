@@ -1,3 +1,5 @@
 __pycache__
 .pytest_cache
 *.log
+dist/
+ap_perf.egg-info/
