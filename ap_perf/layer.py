@@ -14,8 +14,8 @@ class MetricFunction(Function):
         use_cuda = input.is_cuda
 
         # convert to numpy
-        input_np = input.cpu().numpy()
-        target_np = target.cpu().numpy()
+        input_np = input.detach().cpu().numpy()
+        target_np = target.detach().cpu().numpy()
 
         # obj and q
         obj_np, q_np = metric.objective(input_np, target_np, **solver_params)

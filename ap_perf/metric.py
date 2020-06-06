@@ -438,7 +438,7 @@ class PerformanceMetric:
             B += IK @ multiplier_pq.c[np.ix_(idx, idx)].T @ IK
             
             if not info.special_case_positive:
-                B += IK @ np.ones((n,1)) @ multiplier_pq.c[idx, 0].reshape((1,n)) @ IK  -  IK @ multiplier_pq.c[0, idx].reshape((n,1)) * np.ones((1,n)) @ IK
+                B -= IK @ np.ones((n,1)) @ multiplier_pq.c[idx, 0].reshape((1,n)) @ IK  +  IK @ multiplier_pq.c[0, idx].reshape((n,1)) * np.ones((1,n)) @ IK
                 D += np.ones((n,1)) @ multiplier_pq.c[idx, 0].reshape((1,n)) @ IK
                 E += np.ones((n,1)) @ multiplier_pq.c[0, idx].reshape((1,n)) @ IK
 
